@@ -1,0 +1,79 @@
+.contact_wrapper svg {
+  font-size: 1em;
+  vertical-align: middle;
+  // margin-right: 5px;
+}
+
+.contact-form {
+  padding-top: 20px;
+
+  button {
+    float: right;
+    background-color: white;
+    color: #050f0b;
+  }
+
+  button:hover {
+    background-color: #5000ca;
+    color: white;
+  }
+
+  // fieldset {
+  //   background-color: white;
+  // }
+}
+
+label {
+  font-size: 1.2rem;
+  font-family: 'DomaineDispNar-Medium', sans-serif;
+}
+
+.form-flex {
+  display: flex;
+  gap: 15px;
+  padding-bottom: 15px;
+}
+
+.form-flex .MuiFormControl-root {
+  width: 100%;
+}
+
+form {
+  width: 100% !important;
+}
+
+.body-form {
+  width: 100% !important;
+  margin-bottom: 15px !important;
+}
+
+.contact-form {
+  .MuiOutlinedInput-root {
+    background-color: #fff; // Set background color to white
+    border-radius: 4px; // Optional: add border-radius for rounded corners
+
+    .MuiInputBase-input {
+      color: #000; // Set text color to black
+    }
+
+    .MuiOutlinedInput-notchedOutline {
+      border-color: #000; // Set border color to black
+    }
+
+    &:hover .MuiOutlinedInput-notchedOutline {
+      border-color: #5000ca; // Set border color on hover (optional)
+    }
+
+    &.Mui-focused .MuiOutlinedInput-notchedOutline {
+      border-color: #5000ca; // Set border color when focused
+    }
+  }
+
+  .MuiFormLabel-root {
+    color: #000; // Set label color to black
+  }
+
+  .MuiFormHelperText-root {
+    color: #f44336; // Set helper text color for error messages (optional)
+  }
+}
