@@ -16,7 +16,7 @@ function Main() {
             <a href="https://github.com/bjaggi-sag/" target="_blank" rel="noreferrer"><GitHubIcon/></a>
             <a href="https://www.linkedin.com/in/balpreet-singh-jaggi-72308471/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
           </div>
-          <h1>Balpreet S. Jaggi</h1>
+          <h1>Balpreet Jaggi</h1>
           <p>Full Stack Developer</p>
            <p>A Full Stack Developer and Engineering Lead with expertise in IoT and cloud solutions. Based in Toronto, I have a background in distributed software systems and a track record of leading successful projects. I’m passionate about building efficient, scalable systems and continuously improving my craft. Outside of work, I enjoy hiking, fitness, and reading.
            </p>
