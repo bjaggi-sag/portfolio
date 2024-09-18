@@ -17,13 +17,19 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import { Tooltip } from "@mui/material";
 import DownloadIcon from '@mui/icons-material/Download'; 
+
 const drawerWidth = 240;
-const navItems = [['About Me', 'about-section'],['Skills', 'expertise'], ['Experience', 'history'], ['Education', 'edu_history'], ['Projects', 'projects'], ['Contact', 'contact']];
+const navItems = [
+  ['About Me', 'about-section'],
+  ['Skills', 'expertise'],
+  ['Experience', 'history'],
+  ['Education', 'edu_history'],
+  ['Projects', 'projects'],
+  ['Contact', 'contact']
+];
 
-function Navigation({parentToChild, modeChange}: any) {
-
-  const {mode} = parentToChild;
-
+function Navigation({ parentToChild, modeChange }: any) {
+  const { mode } = parentToChild;
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
 
@@ -48,19 +54,19 @@ function Navigation({parentToChild, modeChange}: any) {
   }, []);
 
   const scrollToSection = (section: string) => {
-    console.log(section)
-    const expertiseElement = document.getElementById(section);
-    if (expertiseElement) {
-      expertiseElement.scrollIntoView({ behavior: 'smooth' });
-      console.log('Scrolling to:', expertiseElement);  // Debugging: Ensure the element is found
+    console.log(section);
+    const sectionElement = document.getElementById(section);
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: 'smooth' });
+      console.log('Scrolling to:', sectionElement);  // Debugging: Ensure the element is found
     } else {
-      console.error('Element with id "expertise" not found');  // Debugging: Log error if element is not found
+      console.error('Element with id "' + section + '" not found');  // Debugging: Log error if element is not found
     }
   };
 
   const drawer = (
     <Box className="navigation-bar-responsive" onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <p className="mobile-menu-top"><ListIcon/>Menu</p>
+      <p className="mobile-menu-top"><ListIcon />Menu</p>
       <Divider />
       <List>
         {navItems.map((item) => (
@@ -71,6 +77,25 @@ function Navigation({parentToChild, modeChange}: any) {
           </ListItem>
         ))}
       </List>
+      <Tooltip title="Download Resume">
+        <IconButton
+          component="a"
+          href="/BalpreetResume.pdf" // Adjust path as needed
+          download="BalpreetResume.pdf"
+          sx={{
+            color: '#fff',
+            borderColor: '#fff',
+            borderWidth: '2px',
+            borderStyle: 'solid',
+            marginTop: 2, // Added margin for spacing
+            '&:hover': {
+              backgroundColor: 'rgba(255, 255, 255, 0.1)',
+            },
+          }}
+        >
+          <DownloadIcon />
+        </IconButton>
+      </Tooltip>
     </Box>
   );
 
@@ -89,10 +114,31 @@ function Navigation({parentToChild, modeChange}: any) {
             <MenuIcon />
           </IconButton>
           {mode === 'dark' ? (
-            <LightModeIcon onClick={() => modeChange()}/>
+            <LightModeIcon onClick={() => modeChange()} />
           ) : (
-            <DarkModeIcon onClick={() => modeChange()}/>
+            <DarkModeIcon onClick={() => modeChange()} />
           )}
+          <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
+            <Tooltip title="Download Resume">
+              <IconButton
+                component="a"
+                href="/BalpreetResume.pdf" // Adjust path as needed
+                download="BalpreetResume.pdf"
+                sx={{
+                  color: '#fff',
+                  borderColor: '#fff',
+                  borderWidth: '2px',
+                  borderStyle: 'solid',
+                  marginLeft: 2,
+                  '&:hover': {
+                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  },
+                }}
+              >
+                <DownloadIcon />
+              </IconButton>
+            </Tooltip>
+          </Box>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
               <Button key={item[0]} onClick={() => scrollToSection(item[1])} sx={{ color: '#fff' }}>
@@ -115,7 +161,7 @@ function Navigation({parentToChild, modeChange}: any) {
                   },
                 }}
               >
-              <DownloadIcon />
+                <DownloadIcon />
               </IconButton>
             </Tooltip>
           </Box>

@@ -1,6 +1,5 @@
 import React from "react";
-import mock01 from '../assets/images/mock01.png';
-import mock02 from '../assets/images/mock02.png';
+
 
 import '../assets/styles/Project.scss';
 
@@ -45,7 +44,7 @@ const projects = [
         'Implemented Angular’s asynchronous features like Promise.all and RxJS for efficient parallel data retrieval.',
       ],
       technologies: ['OpenStreet Maps', 'Angular', 'REST APIs', 'Async Promises'],
-      teamSize: '1 developer, lead developer.',
+      teamSize: 'Lead developer.',
     },
     {
       title: 'Shape Technologies – IoT Integration for Manufacturing',
