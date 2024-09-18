@@ -102,8 +102,8 @@ function Navigation({parentToChild, modeChange}: any) {
             <Tooltip title="Download Resume">
               <IconButton
                 component="a"
-                href="/BalpreetSJaggiCV.pdf" // Adjust path as needed
-                download="BalpreetSJaggiCV.pdf"
+                href="/BalpreetResume.pdf" // Adjust path as needed
+                download="BalpreetResume.pdf"
                 sx={{
                   color: '#fff',
                   borderColor: '#fff',

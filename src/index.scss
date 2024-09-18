@@ -15,8 +15,7 @@ code {
 
 .main-container {
   position: relative;
-  background-color: #0d1116;
-
+  background-color: #0d1116; // Dark mode background color
 }
 
 a {
@@ -25,17 +24,21 @@ a {
 
 a:hover {
   color: #5000ca;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
 
 p, a, h1, h2, h3, h4, h5, label, button {
-  color: white;
+  color: white; // Default text color for dark mode
   font-family: "Lato", sans-serif;
+}
+
+li {
+  color: inherit; // Ensure list items inherit text color
 }
 
 .navigation-bar {
   justify-content: space-between;
-  background-color: #0d1116;
+  background-color: #0d1116; // Dark mode background color
 
   button {
     font-size: 1.1rem;
@@ -51,7 +54,7 @@ p, a, h1, h2, h3, h4, h5, label, button {
 
 .navigation-bar-responsive {
   span, p {
-    color: #0d1116;
+    color: #0d1116; // Dark mode text color
     font-family: "Lato", sans-serif;
   }
 }
@@ -93,23 +96,27 @@ p, a, h1, h2, h3, h4, h5, label, button {
 }
 
 .light-mode {
-  background-color: #f8f9fa;
+  background-color: #f8f9fa; // Light mode background color
 
   .navigation-bar {
-    background-color: #f8f9fa;
+    background-color: #f8f9fa; // Light mode background color
   }
 
   p, a, h1, h2, h3, h4, h5, label, button {
-    color: #0d1116;
+    color: #0d1116; // Light mode text color
+  }
+
+  li {
+    color: #0d1116; // Light mode list item text color
   }
 
   a:hover {
     color: #5000ca;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
   }
 
   .navigation-bar svg {
-    color: #0d1116;
+    color: #0d1116; // Light mode icon color
   }
 
   .about-section {
@@ -117,7 +124,7 @@ p, a, h1, h2, h3, h4, h5, label, button {
   }
 
   .skills-container svg {
-    color: #0d1116;
+    color: #0d1116; // Light mode icon color
   }
 
   .chip {
@@ -142,14 +149,12 @@ p, a, h1, h2, h3, h4, h5, label, button {
   }
 
   .flex-chips .chip-title {
-    color: #0d1116;
+    color: #0d1116; // Light mode text color
   }
 }
 
-@media screen {
-  @media (max-width: 768px) {
-    .items-container {
-      padding: 5% 5%;
-    }
+@media (max-width: 768px) {
+  .items-container {
+    padding: 5% 5%;
   }
 }

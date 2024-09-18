@@ -18,7 +18,7 @@ function Main() {
           </div>
           <h1>Balpreet Jaggi</h1>
           <p>Full Stack Developer</p>
-           <p>A Full Stack Developer and Engineering Lead with expertise in IoT and cloud solutions. Based in Toronto, I have a background in distributed software systems and a track record of leading successful projects. I’m passionate about building efficient, scalable systems and continuously improving my craft. Outside of work, I enjoy hiking, fitness, and reading.
+           <p>I’m a Full Stack Developer and Engineering Lead based in Toronto, specializing in IoT and cloud solutions. With a strong background in developing and migrating complex systems, I’ve led projects ranging from smart home platform migrations to advanced real-time analytics integrations. My expertise includes frontend and backend development, using technologies like Angular, Apama EPL, and Docker. I’m dedicated to building scalable, efficient systems and am passionate about continuous improvement.
            </p>
 
           <div className="mobile_social_icons">
